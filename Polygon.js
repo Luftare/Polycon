@@ -122,14 +122,14 @@ class Polygon {
   }
   
   _linesIntersect(start0, end0, start1, end1) {
-  let s1_x, s1_y, s2_x, s2_y, s, t;
-  s1_x = end0.x - start0.x;
-  s1_y = end0.y - start0.y;
-  s2_x = end1.x - start1.x;
-  s2_y = end1.y - start1.y;
+    let s1_x, s1_y, s2_x, s2_y, s, t;
+    s1_x = end0.x - start0.x;
+    s1_y = end0.y - start0.y;
+    s2_x = end1.x - start1.x;
+    s2_y = end1.y - start1.y;
 
-  s = (-s1_y * (start0.x - start1.x) + s1_x * (start0.y - start1.y)) / (-s2_x * s1_y + s1_x * s2_y);
-  t = ( s2_x * (start0.y - start1.y) - s2_y * (start0.x - start1.x)) / (-s2_x * s1_y + s1_x * s2_y);
-  return (s >= 0 && s <= 1 && t >= 0 && t <= 1);
+    s = (-s1_y * (start0.x - start1.x) + s1_x * (start0.y - start1.y)) / (-s2_x * s1_y + s1_x * s2_y);
+    t = ( s2_x * (start0.y - start1.y) - s2_y * (start0.x - start1.x)) / (-s2_x * s1_y + s1_x * s2_y);
+    return (s >= 0 && s <= 1 && t >= 0 && t <= 1);
   }
 }
